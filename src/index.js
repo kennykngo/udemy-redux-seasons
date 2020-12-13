@@ -5,7 +5,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      // if we know that the value of the property of the state's object is a number
+      // we initialize it as 'null'
+      lat: null,
+    };
   }
 
   render() {
