@@ -13,8 +13,8 @@ class App extends React.Component {
       (err) => this.setState({ errorMessage: err.message })
     );
   }
-  // render method gets called all of the time
-  render() {
+
+  renderContent() {
     // handles the error message section
     if (this.state.errorMessage && !this.state.lat) {
       return <div> Error: {this.state.errorMessage}</div>;
@@ -26,6 +26,10 @@ class App extends React.Component {
     }
 
     return <Spinner message="Please accept location request" />;
+  }
+  // render method gets called all of the time
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
