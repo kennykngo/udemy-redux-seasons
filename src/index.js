@@ -25,17 +25,15 @@ class App extends React.Component {
     );
   }
 
-  // render method gets called all of the time
-  //   render() {
-  //     return (
-  //       <div>
-  //         Latitude: {this.state.lat}
-  // 		<br />
-  //         Error: {this.state.errorMessage}
-  //       </div>
-  //     );
-  //   }
+  componentDidMount() {
+    console.log("My component was rendered to the screen");
+  }
 
+  componentDidUpdate() {
+    console.log("My component was just updated - it rerendered!");
+  }
+
+  // render method gets called all of the time
   render() {
     // handles the error message section
     if (this.state.errorMessage && !this.state.lat) {
