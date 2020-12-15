@@ -5,6 +5,7 @@ import SeasonDisplay from "./SeasonDisplay";
 import Spinner from "./Spinner";
 
 class App extends React.Component {
+  // constructor is going to exist anyways because Babel places property into a constructor method
   state = { lat: null, errorMessage: "" };
 
   componentDidMount() {
